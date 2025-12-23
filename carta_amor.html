@@ -1,0 +1,88 @@
+pnp<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor para Mi Novia</title>
+    <style>
+        body {
+            background: #fce4ec;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .corazon {
+            font-size: 150px;
+            color: #e91e63;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .corazon:hover {
+            transform: scale(1.2);
+        }
+        .mensaje {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            max-width: 80%;
+        }
+        /* Clase que se agrega cuando se hace clic */
+        .corazon-oculto {
+            display: none;
+        }
+        .mensaje-visible {
+            display: block;
+        }
+        h1 {
+            color: #e91e63;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+        /* Ajuste del iframe para móviles */
+        iframe {
+            width: 100%;
+            max-width: 300px;
+            height: 80px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Corazón interactivo (sin enlace, solo con clic en JavaScript) -->
+    <div class="corazon" id="corazon">♥</div>
+
+    <!-- Mensaje que aparece después del clic -->
+    <div class="mensaje" id="mensaje">
+        <h1>Para la mujer que llena mi vida de color</h1>
+        <p>Querida Princesita Ingrid,<br><br>
+        Cada día a tu lado es un regalo. Te amo por tu sonrisa, por tu forma de ver el mundo y por hacer que cada momento que paso contigo sea especial.<br><br>
+        Te espero para vivir muchas más aventuras juntos y poder conocernos en persona y haer que nuestras vidas sean mas felices te amo con mucha fuerza que jamas te dejare ir hasta verte feliz a mi lado, eres lo mejor que me a pasado en la vida mil gracias por quedarte y amarme tal y como lo haces, eres una belleza de mujer, eres perfeccion en un mund tan escaso de eso y por tal motivo no te quiero perder eres todo para mi</p>
+        <p>Te amo con todo mi corazón ❤ <br><br>
+            Atte. Un loco perdidamente enamorado de ti ❤
+        </p>
+
+    </div>
+
+    <script>
+        // Obtener los elementos del DOM
+        const corazon = document.getElementById('corazon');
+        const mensaje = document.getElementById('mensaje');
+
+        // Agregar evento de clic al corazón
+        corazon.addEventListener('click', () => {
+            corazon.classList.add('corazon-oculto');
+            mensaje.classList.add('mensaje-visible');
+        });
+    </script>
+</body>
+</html>
