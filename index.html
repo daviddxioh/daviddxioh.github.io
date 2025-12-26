@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Gigi</title>
+    <style>
+        /* Estilos sencillos y adaptables a móviles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec;
+            color: #424242;
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 90%;
+        }
+        /* Estilo para la imagen de Rumi */
+        .rumi-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #e91e63;
+        }
+        button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #c2185b;
+        }
+        .heart {
+            color: #e91e63;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Pantalla 1: Mensaje de Rumi + Imagen -->
+    <div id="screen-rumi" class="container">
+        <!-- Imagen pública de Sakura (Rumi) de Le Sserafim -->
+        <img src="https://i.pinimg.com/originals/1c/3e/df/1c3edf1d4258e4d1f9e9b2fbf66dccc3.png" alt="Rumi (Sakura) de Le Sserafim" class="rumi-img">
+        <p>Hi Gigi, your friend El Robador<br>He has a very important message to tell you and wants you to read it.<br>He writes it with much love from Mexico.</p>
+        <button id="btn-continue">continue to the letter</button>
+    </div>
+
+    <!-- Pantalla 2: Carta de cariño (oculta al inicio) -->
+    <div id="screen-letter" class="container" style="display: none;">
+        <p>Hi Gigi, it's your friend, el robador</p>
+        <p>This letter is to remind you of the love and appreciation I have for you. I want you to know that you are a very intelligent girl who will achieve great things in life.</p>
+        <p>You are a very pretty girl who deserves the best treatment and all the love in the world. You are a very nice girl and above all, very respectful.</p>
+        <p>I hope you enjoyed this Christmas with your family and that you received many gifts and lots of love.</p>
+        <p>I'm sending you a big hug all the way to El Salvador, but since I can't give it to you in person, ask your mom to give it to you for me.</p>
+        <p>I love you, Gigi, and I hope we can always be best friends <span class="heart">❤️</span></p>
+    </div>
+
+    <script>
+        // Función para cambiar de pantalla al presionar el botón
+        const btnContinue = document.getElementById('btn-continue');
+        const screenRumi = document.getElementById('screen-rumi');
+        const screenLetter = document.getElementById('screen-letter');
+
+        btnContinue.addEventListener('click', () => {
+            screenRumi.style.display = 'none';
+            screenLetter.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
